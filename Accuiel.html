@@ -4,8 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LireMonde</title>
+    <link rel ="stylesheet" href="Accuiel.css">
 </head>
 <body>
-    
+   <header class="navbar">
+    <div class="logo">
+  <img src="photo liremonde/logo livre.jpg" alt="logo">
+  <span>LireMonde</span>
+</div>
+<nav class="menu">
+  <a href="#home">Acceuil</a>
+  <a href="#movies">A Lire</a>
+  <a href="#favorites">Admin</a>
+</nav>
+  <input type="text" placeholder="Recherche...." class="search">
+  </header> 
+ <section class="hero">
+    <div class="hero-text">
+     <p>
+     Plongez dans un univers de <br>
+     lecture interactif où chaque livre <br>
+     raconte une nouvelle aventure. <br>
+     Découvrez, recherchez et <br>
+     sauvegardez vos ouvrages <br>
+     préférés en quelques clics.
+     </p>
+    </div>
+    <div class="hero-image">
+    </div>
+</section>
+  <section class="filters">
+  <button class="filter-btn" data-cat="all">Tous</button>
+<button class="filter-btn" data-cat="action">Classique</button>
+<button class="filter-btn" data-cat="drame">Science-fiction</button>
+<button class="filter-btn" data-cat="comédie">Fantaisie</button>
+<button class="filter-btn" data-cat="comédie">Drame</button>
+</section>
+    <section id="livre" class="livre">
+    <h2>Explorez les mellieures livres</h2> 
+   </section>
+<section id="A lire" class=" A lire">
+ <h2>A Lire</h2>
+<div id=" A lire-container"></div>
+</section>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+    <h2 class="footer-title">LireMonde</h2>
+    <p class="footer-description">
+    Plateforme de <br>
+    lecture numérique <br>
+    interactive
+    </p>
+    </div>
+    <div class="footer-links">
+    <h3 class="footer-subtitle">Liens utiles :</h3>
+<ul class="footer-list">
+    <li>Accueil</li>
+    <li>À lire</li>
+    <li>Admin</li>
+</ul>
+    </div>
+    <div class="footer-contact">
+      <h3 class="footer-subtitle">Contact :</h3>
+      <a href="mailto:support@liremonde.com"
+      class="footer-email">support@liremonde.com</a>
+   </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 LireMonde — Tous droits réservés
+  </div>
+</footer>
+<script src="Accuiel.js"></script>
 </body>
 </html>

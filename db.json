@@ -1,0 +1,76 @@
+{
+  "livres": [
+    {
+      "id": 1,
+      "titre": "Les Misérables",
+      "auteur": "Victor Hugo",
+      "genre": "Classique",
+      "description": "Un des chefs-d'œuvre de la littérature française, racontant les destins croisés de plusieurs personnages dans la France du XIXe siècle, entre révolution et rédemption.",
+      "couverture": "photoliremonde/Les Misérables.jpg",
+      "aLire": false
+    },
+    {
+      "id": 2,
+      "titre": "Rebecca",
+      "auteur": "Daphne du Maurier",
+      "genre": "Drame",
+      "description": "Une jeune femme épouse un veuf mystérieux et découvre que son manoir est hanté par le souvenir de sa première femme, Rebecca.",
+      "couverture": "photoliremonde/Rebecca.jpg",
+      "aLire": false
+    },
+    {
+      "id": 3,
+      "titre": "Silo",
+      "auteur": "Hugh Howey",
+      "genre": "Science-fiction",
+      "description": "Dans un futur post-apocalyptique, les survivants vivent dans un immense silo souterrain, ignorant tout de ce qui se passe à l'extérieur.",
+      "couverture": "photoliremonde/Silo.jpg",
+      "aLire": false
+    },
+    {
+      "id": 4,
+      "titre": "Misery",
+      "auteur": "Stephen King",
+      "genre": "Drame",
+      "description": "Un célèbre romancier est recueilli après un accident par sa plus grande fan, qui exige qu'il écrive un nouveau roman selon ses conditions.",
+      "couverture": "photoliremonde/Misery.jpg",
+      "aLire": false
+    },
+    {
+      "id": 5,
+      "titre": "Nevermoor",
+      "auteur": "Jessica Townsend",
+      "genre": "Fantaisie",
+      "description": "Morrigan Crow est une jeune fille maudite qui découvre un monde magique et une école extraordinaire où elle pourrait enfin trouver sa place.",
+      "couverture": "photoliremonde/Nevermoor.jpg",
+      "aLire": false
+    },
+    {
+      "id": 6,
+      "titre": "L'Étranger",
+      "auteur": "Albert Camus",
+      "genre": "Classique",
+      "description": "Meursault, un employé d'Alger, vit sa vie avec indifférence jusqu'au jour où il commet un acte irrévocable qui le confronte à l'absurde de l'existence.",
+      "couverture": "photoliremonde/L'Étranger.jpg",
+      "aLire": false
+    },
+    {
+      "id": 7,
+      "titre": "Twilight",
+      "auteur": "Stephenie Meyer",
+      "genre": "Fantaisie",
+      "description": "Bella Swan déménage dans une petite ville pluvieuse et tombe amoureuse d'Edward Cullen, un vampire qui cache un monde de mystères et de dangers.",
+      "couverture": "photoliremonde/Twilight.jpg",
+      "aLire": false
+    },
+    {
+      "id": 8,
+      "titre": "1984",
+      "auteur": "George Orwell",
+      "genre": "Science-fiction",
+      "description": "Dans une société totalitaire où la pensée est contrôlée par Big Brother, Winston Smith tente de résister à un système qui écrase l'individualité.",
+      "couverture": "photoliremonde/1984.jpg",
+      "aLire": false
+    }
+  ]
+}
