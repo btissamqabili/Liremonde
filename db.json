@@ -1,7 +1,7 @@
 {
   "livres": [
     {
-      "id": 1,
+      "id": "1",
       "titre": "Les Misérables",
       "auteur": "Victor Hugo",
       "genre": "Classique",
@@ -10,7 +10,7 @@
       "aLire": false
     },
     {
-      "id": 2,
+      "id": "2",
       "titre": "Rebecca",
       "auteur": "Daphne du Maurier",
       "genre": "Drame",
@@ -19,7 +19,7 @@
       "aLire": false
     },
     {
-      "id": 3,
+      "id": "3",
       "titre": "Silo",
       "auteur": "Hugh Howey",
       "genre": "Science-fiction",
@@ -28,7 +28,7 @@
       "aLire": false
     },
     {
-      "id": 4,
+      "id": "4",
       "titre": "Misery",
       "auteur": "Stephen King",
       "genre": "Drame",
@@ -37,7 +37,7 @@
       "aLire": false
     },
     {
-      "id": 5,
+      "id": "5",
       "titre": "Nevermoor",
       "auteur": "Jessica Townsend",
       "genre": "Fantaisie",
@@ -46,7 +46,7 @@
       "aLire": false
     },
     {
-      "id": 6,
+      "id": "6",
       "titre": "L'Étranger",
       "auteur": "Albert Camus",
       "genre": "Classique",
@@ -55,7 +55,7 @@
       "aLire": false
     },
     {
-      "id": 7,
+      "id": "7",
       "titre": "Twilight",
       "auteur": "Stephenie Meyer",
       "genre": "Fantaisie",
@@ -64,7 +64,7 @@
       "aLire": false
     },
     {
-      "id": 8,
+      "id": "8",
       "titre": "1984",
       "auteur": "George Orwell",
       "genre": "Science-fiction",
@@ -72,5 +72,6 @@
       "couverture": "photoliremonde/1984.jpg",
       "aLire": false
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

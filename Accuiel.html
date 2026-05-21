@@ -9,13 +9,13 @@
 <body>
    <header class="navbar">
     <div class="logo">
-  <img src="photo liremonde/logo livre.jpg" alt="logo">
+  <img src="photoliremonde/logo livre.jpg" alt="logo">
   <span>LireMonde</span>
 </div>
 <nav class="menu">
-  <a href="#home">Acceuil</a>
-  <a href="#movies">A Lire</a>
-  <a href="#favorites">Admin</a>
+  <a href="#acceuil">Acceuil</a>
+  <a href="#alire">A Lire</a>
+  <a href="#admin">Admin</a>
 </nav>
   <input type="text" placeholder="Recherche...." class="search">
   </header> 
@@ -33,24 +33,40 @@
     <div class="hero-image">
     </div>
 </section>
-  <section class="filters">
-  <button class="filter-btn" data-cat="all">Tous</button>
-<button class="filter-btn" data-cat="action">Classique</button>
-<button class="filter-btn" data-cat="drame">Science-fiction</button>
-<button class="filter-btn" data-cat="comédie">Fantaisie</button>
-<button class="filter-btn" data-cat="comédie">Drame</button>
+ <section class="filters">
+
+  <button class="filter-btn active" data-cat="all">
+    Tous
+  </button>
+
+  <button class="filter-btn" data-cat="Classique">
+    Classique
+  </button>
+
+  <button class="filter-btn" data-cat="Science-fiction">
+    Science-fiction
+  </button>
+
+  <button class="filter-btn" data-cat="Fantaisie">
+    Fantaisie
+  </button>
+
+  <button class="filter-btn" data-cat="Drame">
+    Drame
+  </button>
+
 </section>
     <h1>Explorez les meilleures livres</h1>
     <section class="livre"></section>
 
  <h1>A Lire</h1>
-    <section id="a-lire" class="a-lire">
-        <div id="a-lire-container"></div>
-    </section>
+   <section class="a-lire" id="alire">
+   <div id="a-lire-container"></div>
+</section>
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-brand">
-    <h2 class="footer-title">LireMonde</h2>
+    <h3 class="footer-title">LireMonde</h3>
     <p class="footer-description">
     Plateforme de <br>
     lecture numérique <br>
