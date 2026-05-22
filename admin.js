@@ -8,8 +8,7 @@ const livreForm            = document.getElementById('livreForm');
 const btnOpenModal         = document.getElementById('btnOpenModal');
 const btnCancel            = document.getElementById('btnCancel');
 const btnToggleFilter      = document.getElementById('btnToggleFilter');
-const modalTitle           = document.getElementById('modalTitle');
-
+const modalTitle          = document.getElementById('modalTitle');
 const inputId          = document.getElementById('livreId');
 const inputTitre       = document.getElementById('inputTitre');
 const inputAuteur      = document.getElementById('inputAuteur');
@@ -18,9 +17,47 @@ const inputDescription = document.getElementById('inputDescription');
 const inputCouverture  = document.getElementById('inputCouverture');
 const inputALire       = document.getElementById('inputALire');
 
-let allLivres        = [];
-let activeFilter     = '';   
-let filterVisible    = false;
+let allLivres = [];
+let activeFilter = '';   
+let filterVisible= false;
+
+const links = [
+  { text: "Accueil", href: "Accuiel.html" },
+  { text: "A Lire", href: "Accuiel.html#alire" },
+  { text: "Admin", href: "Admin.html" }
+];
+
+const menu = document.getElementById("menu");
+
+const currentPage = window.location.pathname.split("/").pop();
+const currentHash = window.location.hash;
+
+links.forEach(link => {
+  const a = document.createElement("a");
+
+  a.textContent = link.text;
+  a.href = link.href;
+
+  const [linkPage, linkHash] = link.href.split("#");
+
+  if (
+    currentPage === linkPage &&
+    ((linkHash && currentHash === "#" + linkHash) ||
+      (!linkHash && currentHash === ""))
+  ) {
+    a.classList.add("active");
+  }
+
+  a.addEventListener("click", () => {
+    document.querySelectorAll(".menu a").forEach(el => {
+      el.classList.remove("active");
+    });
+
+    a.classList.add("active");
+  });
+
+  menu.appendChild(a);
+});
 
 async function fetchLivres() {
   try {
@@ -258,4 +295,7 @@ function esc(str) {
   if (!str) return '';
   return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
+
+
+
 fetchLivres();

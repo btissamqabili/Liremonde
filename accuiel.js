@@ -31,7 +31,6 @@ function afficherLivres() {
 
   let result = window._tousLivres;
 
-  // filter genre
   if (state.genre !== "all") {
     result = result.filter(l => l.genre === state.genre);
   }
@@ -206,5 +205,41 @@ searchInput.addEventListener("input", (e) => {
   afficherLivres();
 
 });
+const links = [
+  { text: "Accueil", href: "Accuiel.html" },
+  { text: "A Lire", href: "Accuiel.html#alire" },
+  { text: "Admin", href: "Admin.html" }
+];
 
+const menu = document.getElementById("menu");
+
+const currentPage = window.location.pathname.split("/").pop();
+const currentHash = window.location.hash;
+
+links.forEach(link => {
+  const a = document.createElement("a");
+
+  a.textContent = link.text;
+  a.href = link.href;
+
+  const [linkPage, linkHash] = link.href.split("#");
+
+  if (
+    currentPage === linkPage &&
+    ((linkHash && currentHash === "#" + linkHash) ||
+      (!linkHash && currentHash === ""))
+  ) {
+    a.classList.add("active");
+  }
+
+  a.addEventListener("click", () => {
+    document.querySelectorAll(".menu a").forEach(el => {
+      el.classList.remove("active");
+    });
+
+    a.classList.add("active");
+  });
+
+  menu.appendChild(a);
+});
 getLivres();

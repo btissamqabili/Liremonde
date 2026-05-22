@@ -61,7 +61,11 @@ body {
 .menu a:hover {
     background-color: #b89b7d;
 }
-
+.menu a.active {
+    background-color: #5e0b2f;
+    color: white;
+    box-shadow: 0 4px 14px rgba(122,14,61,0.4);
+}
 .search {
     background-color: #5a1f1f;
     color: white;
@@ -257,24 +261,20 @@ h1::after, h2::after {
 }
 
 
-/* --- تعديل سيكشن A Lire باش تولي بنفس حجم السيكشن الفوقانية --- */
-
 #a-lire-container .livres-container {
     display: grid;
-    /* ردينها 1fr بحال لفو9 باش تاخد نفس المساحة المرنة */
     grid-template-columns: repeat(4, 1fr); 
-    gap: 28px; /* نفس الـ gap */
+    gap: 28px;
     justify-content: start;
-    margin-left: 0; /* حيدنا الـ margin-left باش يجيوا مقادين وعاموديين مع لفو9 */
+    margin-left: 0; 
     margin-bottom: 42px;
 }
 
 #a-lire-container .livre-card {
-    /* حيدنا width: 220px تخليه ياخد مساحة الـ grid تلقائياً */
     background: #d8c2a8;
-    padding: 14px 14px 20px; /* نفس padding السيكشن الأولى */
-    box-shadow: 0 4px 16px rgba(0,0,0,0.13); /* إضافة نفس الـ shadow كخيار جمالي */
-    border-radius: 14px; /* رجعناها 14px باش تجي متناسقة مع الفوقانية */
+    padding: 14px 14px 20px; 
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13); 
+    border-radius: 14px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -283,15 +283,13 @@ h1::after, h2::after {
 
 #a-lire-container .livre-card img {
     width: 100%;
-    /* حيدنا height: 300px ودرنا الـ aspect-ratio باش تجي التصويرة بنفس الأبعاد تماماً */
     aspect-ratio: 2 / 3; 
     object-fit: cover;
-    border-radius: 6px; /* نفس التدويرة ديال لفو9 */
+    border-radius: 6px; 
     margin-bottom: 12px;
     display: block;
 }
 
-/* --- الحفاظ على الستقايل الخاص بمحتوى A Lire (العناوين والأزرار) --- */
 
 #a-lire-container .livre-info h3 {
     color: #5a2a1a;
@@ -307,7 +305,6 @@ h1::after, h2::after {
     margin: 0 0 12px;
 }
 
-/* زر العنوان الخاص بـ A Lire */
 #a-lire-container .btn-titre {
     width: 100%;
     background: transparent;
@@ -315,18 +312,18 @@ h1::after, h2::after {
     font-weight: bold;
     padding: 0;
     margin-top: 5px;
-    font-size: 25px; /* نقصنا شوية من 25px باش يجي متناسق مع حجم الكارد الجديد */
+    font-size: 25px; 
     border: none;
     cursor: pointer;
 }
 
-/* زر الحذف Supprimer */
+
 #a-lire-container .btn-supprimer {
     width: 100%;
     margin-top: 10px;
     border-radius: 6px;
     background: #6b1d1d;
-    font-size: 25px; /* صغرنا حجم الخط لـ 14px باش الزر يجي أنيق وميخسرش شكل الكارد */
+    font-size: 25px; 
     color: #f3f3f3;
     padding: 8px 0;
     border: none;
