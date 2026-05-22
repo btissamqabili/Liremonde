@@ -37,15 +37,6 @@
       "aLire": false
     },
     {
-      "id": "5",
-      "titre": "Nevermoor",
-      "auteur": "Jessica Townsend",
-      "genre": "Fantaisie",
-      "description": "Morrigan Crow est une jeune fille maudite qui découvre un monde magique et une école extraordinaire où elle pourrait enfin trouver sa place.",
-      "couverture": "photoliremonde/Nevermoor.jpg",
-      "aLire": false
-    },
-    {
       "id": "6",
       "titre": "L'Étranger",
       "auteur": "Albert Camus",
@@ -70,8 +61,9 @@
       "genre": "Science-fiction",
       "description": "Dans une société totalitaire où la pensée est contrôlée par Big Brother, Winston Smith tente de résister à un système qui écrase l'individualité.",
       "couverture": "photoliremonde/1984.jpg",
-      "aLire": false
+      "aLire": true
     }
+    
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }

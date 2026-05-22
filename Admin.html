@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LireMonde-Admin</title>
+  <link rel="stylesheet" href="Admin.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <<header class="navbar">
+  <a href="Accuiel.html" class="logo">
+    <img src="photoliremonde/logo livre.jpg" alt="logo">
+    <span>LireMonde</span>
+  </a>
+  <nav class="menu">
+    <a href="Accuiel.html">Accueil</a>
+    <a href="Accuiel.html#alire">A Lire</a>
+    <a href="Admin.html" class="active">Admin</a>
+  </nav>
+  <button class="btn-add-nav" id="btnOpenModal">
+    <i class="fa-solid fa-plus"></i> Ajouter un livre
+  </button>
+</header>
+  <main class="main-content">
+    <h1 class="page-title">Gestion des livres</h1>
+    <div class="filter-bar">
+      <button class="filter-toggle-btn" id="btnToggleFilter">
+        Le genre
+      </button>
+      <div class="genre-pills" id="filterPillsContainer"></div>
+    </div>
+    <div class="table-wrapper">
+      <table class="livres-table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>Couverture</th>
+            <th>titre</th>
+            <th>Auteur</th>
+            <th>Genre</th>
+            <th>À Lire</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="livresTableBody"></tbody>
+      </table>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-title">LireMonde</p>
+        <p class="footer-sub">Plateforme de<br/>lecture numérique<br/>interactive</p>
+      </div>
+      <div class="footer-links">
+        <p class="footer-heading">Liens utiles :</p>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="alire.html">À lire</a></li>
+          <li><a href="Admin.html">Admin</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <p class="footer-heading">Contact :</p>
+        <p>support@liremonde.com</p>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 LireMonde — Tous droits réservés</div>
+  </footer>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modalTitle">Ajouter un livre</h2>
+      </div>
+      <div class="modal-body">
+        <form id="livreForm" novalidate>
+          <input type="hidden" id="livreId"/>
+
+          <div class="form-row">
+            <label for="inputTitre">titre</label>
+            <input type="text" id="inputTitre" placeholder="Ex: Misery"/>
+          </div>
+
+          <div class="form-row">
+            <label for="inputAuteur">Auteur</label>
+            <input type="text" id="inputAuteur" placeholder="Ex: Hugh Howey"/>
+          </div>
+          <div class="form-row form-row--top">
+            <label>Genre</label>
+            <div class="modal-genre-wrap">
+              <div class="genre-pills genre-pills--modal" id="modalPillsContainer"></div>
+              <input type="hidden" id="inputGenre"/>
+              <span class="genre-placeholder" id="genrePlaceholder">sélectionner un genre.</span>
+            </div>
+          </div>
+          <div class="form-row form-row--top">
+            <label for="inputDescription">Description</label>
+            <textarea id="inputDescription" placeholder="description du livre .."></textarea>
+          </div>
+          <div class="form-row">
+            <label for="inputCouverture">Couverture</label>
+            <input type="text" id="inputCouverture" placeholder="https://exemples.com/couverture.jpg"/>
+          </div>
+          <div class="form-row form-row--check">
+            <label>À Lire :</label>
+            <div class="check-wrap">
+              <input type="checkbox" id="inputALire"/>
+              <label for="inputALire" class="check-label">Ajouter à la liste à lire</label>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-cancel" id="btnCancel">Annuler</button>
+            <button type="submit" class="btn-save">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>

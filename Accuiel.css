@@ -16,7 +16,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding: 12px 30px;
+    padding: 12px 30px 50px;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -30,14 +30,14 @@ body {
 }
 
 .logo img {
-    width: 40px;
-    height: 40px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .logo span {
-    font-size: 22px;
+    font-size: 50px;
     font-weight: bold;
     color: #2b1b12;
 }
@@ -53,7 +53,7 @@ body {
     color: #4b2d1f;
     padding: 8px 20px;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 30px;
     font-weight: bold;
     transition: 0.3s;
 }
@@ -67,16 +67,17 @@ body {
     color: white;
     border: none;
     outline: none;
-    padding: 9px 16px;
+    padding: 15px 55px;
     border-radius: 4px;
     width: 190px;
     font-family: Georgia, serif;
-    font-size: 13px;
+    font-size: 18px;
     transition: 0.3s;
 }
 
 .search::placeholder {
     color: rgba(255,255,255,0.65);
+    
 }
 
 .search:focus {
@@ -102,7 +103,7 @@ body {
 }
 
 .hero-text p {
-    font-size: 26px;
+    font-size: 45px;
     line-height: 1.7;
     color: #2b1b12;
     text-shadow: 0 0 18px rgba(255,255,255,0.95);
@@ -110,7 +111,7 @@ body {
 
 h1, h2 {
     text-align: center;
-    font-size: 34px;
+    font-size: 38px;
     color: #2b1b12;
     margin: 45px auto 25px auto;
     font-family: Georgia, serif;
@@ -149,7 +150,7 @@ h1::after, h2::after {
     border: none;
     border-radius: 100px;
     padding: 10px 28px;
-    font-size: 14px;
+    font-size: 30px;
     font-weight: 600;
     font-family: Georgia, serif;
     cursor: pointer;
@@ -221,7 +222,7 @@ h1::after, h2::after {
 }
 
 .livre-info h3 {
-    font-size: 12px;
+    font-size: 30px;
     color: #5a2a1a;
     font-weight: 700;
     text-transform: uppercase;
@@ -231,7 +232,7 @@ h1::after, h2::after {
 
 .livre-info p {
     color: #3a2a1a;
-    font-size: 13px;
+    font-size: 25px;
     font-style: italic;
     margin: 0 0 12px;
 }
@@ -241,7 +242,7 @@ h1::after, h2::after {
     border: none;
     background: #5a2a1a;
     color: white;
-    font-size: 13px;
+    font-size: 33px;
     font-weight: 600;
     font-family: Georgia, serif;
     cursor: pointer;
@@ -256,65 +257,85 @@ h1::after, h2::after {
 }
 
 
-.a-lire{
-    padding: 20px 60px 50px;
-}
+/* --- تعديل سيكشن A Lire باش تولي بنفس حجم السيكشن الفوقانية --- */
 
-#a-lire-container .livres-container{
+#a-lire-container .livres-container {
     display: grid;
-    grid-template-columns: repeat(4, 220px);
-    gap: 30px;
+    /* ردينها 1fr بحال لفو9 باش تاخد نفس المساحة المرنة */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 28px; /* نفس الـ gap */
     justify-content: start;
-    margin-left: 50px;
-    margin-bottom:42px ;
-    
+    margin-left: 0; /* حيدنا الـ margin-left باش يجيوا مقادين وعاموديين مع لفو9 */
+    margin-bottom: 42px;
 }
 
-#a-lire-container .livre-card{
-    width: 220px;
+#a-lire-container .livre-card {
+    /* حيدنا width: 220px تخليه ياخد مساحة الـ grid تلقائياً */
     background: #d8c2a8;
-    border-radius: 0;
-    padding: 12px;
-    box-shadow: none;
-    border-radius: 25px;
+    padding: 14px 14px 20px; /* نفس padding السيكشن الأولى */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13); /* إضافة نفس الـ shadow كخيار جمالي */
+    border-radius: 14px; /* رجعناها 14px باش تجي متناسقة مع الفوقانية */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
 }
 
-#a-lire-container .livre-card img{
+#a-lire-container .livre-card img {
     width: 100%;
-    height: 300px;
+    /* حيدنا height: 300px ودرنا الـ aspect-ratio باش تجي التصويرة بنفس الأبعاد تماماً */
+    aspect-ratio: 2 / 3; 
     object-fit: cover;
-    border-radius: 0;
-    margin-bottom: 10px;
+    border-radius: 6px; /* نفس التدويرة ديال لفو9 */
+    margin-bottom: 12px;
+    display: block;
 }
 
-#a-lire-container .livre-info h3{
-    font-size: 15px;
-    margin-bottom: 5px;
+/* --- الحفاظ على الستقايل الخاص بمحتوى A Lire (العناوين والأزرار) --- */
+
+#a-lire-container .livre-info h3 {
+    color: #5a2a1a;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin: 0 0 5px;
 }
 
-#a-lire-container .livre-info p{
-    font-size: 15px;
-    margin-bottom: 5px;
+#a-lire-container .livre-info p {
+    color: #3a2a1a;
+    font-style: italic;
+    margin: 0 0 12px;
 }
 
-#a-lire-container .btn-titre{
+/* زر العنوان الخاص بـ A Lire */
+#a-lire-container .btn-titre {
     width: 100%;
     background: transparent;
     color: #1b1b1a;
     font-weight: bold;
     padding: 0;
     margin-top: 5px;
-    font-size: 25px;
+    font-size: 25px; /* نقصنا شوية من 25px باش يجي متناسق مع حجم الكارد الجديد */
+    border: none;
+    cursor: pointer;
 }
 
-#a-lire-container .btn-supprimer{
+/* زر الحذف Supprimer */
+#a-lire-container .btn-supprimer {
     width: 100%;
     margin-top: 10px;
-    border-radius: 10px;
+    border-radius: 6px;
     background: #6b1d1d;
-      font-size: 25px;
-      color: #f3f3f3;
+    font-size: 25px; /* صغرنا حجم الخط لـ 14px باش الزر يجي أنيق وميخسرش شكل الكارد */
+    color: #f3f3f3;
+    padding: 8px 0;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
+#a-lire-container .btn-supprimer:hover {
+    background: #4a1313;
 }
 
 .modal-overlay{
