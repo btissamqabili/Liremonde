@@ -7,7 +7,7 @@
       "genre": "Classique",
       "description": "Un des chefs-d'œuvre de la littérature française, racontant les destins croisés de plusieurs personnages dans la France du XIXe siècle, entre révolution et rédemption.",
       "couverture": "photoliremonde/Les Misérables.jpg",
-      "aLire": false
+      "aLire": true
     },
     {
       "id": "2",
@@ -63,7 +63,6 @@
       "couverture": "photoliremonde/1984.jpg",
       "aLire": true
     }
-    
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }
