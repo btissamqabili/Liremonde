@@ -62,6 +62,15 @@
       "description": "Dans une société totalitaire où la pensée est contrôlée par Big Brother, Winston Smith tente de résister à un système qui écrase l'individualité.",
       "couverture": "photoliremonde/1984.jpg",
       "aLire": true
+    },
+    {
+      "id": "9",
+      "titre": "Le Dernier Jour d'un Condamné",
+      "auteur": "Victor Hugo",
+      "genre": "Drame",
+      "description": "cet roman raconte les souffrances morale et physique d'un condamné à mort pendant son séjour dans : Bicêtre, Conciérgerie et l'Hôtel de ville. c'est un  roman à thèse dans laquelle  l'auteur présente une message: d'abolir la peine de mort.",
+      "couverture": "photoliremonde/djc.jpg",
+      "aLire": true
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

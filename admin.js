@@ -255,7 +255,7 @@ livreForm.addEventListener('submit', async e => {
         const n = parseInt(l.id, 10);
         return isNaN(n) ? max : Math.max(max, n);
       }, 0);
-      const nextId = String(maxId + 1);
+      const nextId = maxId + 1;
 
       const res = await fetch(`${BASE_URL}/livres`, {
         method: 'POST',
